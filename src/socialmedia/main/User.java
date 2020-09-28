@@ -8,5 +8,5 @@ public class User {
     private UUID uuid;
     public String firstname;
     public ArrayList<Post> posts = new ArrayList<Post>();
-    public List<User> following;
+    public ArrayList<User> following = new ArrayList<User>();
 }
