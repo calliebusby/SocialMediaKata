@@ -1,9 +1,9 @@
 package socialmedia.main;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 public class Post {
     public String body;
-    public Timestamp date;
+    public Date date = new Date();
     public String author;
 }
