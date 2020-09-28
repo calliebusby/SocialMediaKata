@@ -2,7 +2,6 @@ package socialmedia.test;
 
 import org.junit.jupiter.api.*;
 import socialmedia.main.Post;
-import java.util.Date;
 import static org.junit.jupiter.api.Assertions.*;
 
 
