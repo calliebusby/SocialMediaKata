@@ -3,11 +3,6 @@ package socialmedia.test;
 import org.junit.jupiter.api.*;
 import socialmedia.main.Post;
 import socialmedia.main.User;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UserSpec {
@@ -15,7 +10,6 @@ public class UserSpec {
     User bob = new User();
     User charlie = new User();
     Post alicePost = new Post();
-
 
     @BeforeEach
     public void setUp() {
