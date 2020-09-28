@@ -11,7 +11,6 @@ public class PublishServiceSpec {
 
     @Test
     public void publishPostShouldReturnFalseWhenUserNotProvided() {
-        String username = "";
         String body = "Darn! We lost!";
 
         Boolean expected = publishService.publishPost(null, body);
@@ -19,7 +18,17 @@ public class PublishServiceSpec {
         assertFalse(expected);
     }
 
-    @Test void publishPostShouldSaveANewPost() {
+    @Test
+    public void publishPostShouldReturnFalseWhenBodyNotProvided() {
+        User bob = new User();
+
+        Boolean expected = publishService.publishPost(bob, null);
+
+        assertFalse(expected);
+        assertEquals(0, bob.posts.size());
+    }
+
+    @Test void publishPostShouldSaveANewPostWhenAllInfoProvided() {
         User bob = new User();
         bob.firstname = "Bob";
         String body = "Darn! We lost!";

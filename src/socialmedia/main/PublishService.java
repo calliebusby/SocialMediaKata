@@ -5,7 +5,7 @@ import jdk.jshell.spi.ExecutionControl;
 public class PublishService {
 
     public Boolean publishPost(User user, String body) {
-        if (user != null) {
+        if (user != null && body != null) {
             Post newPost = new Post();
             newPost.body = body;
             newPost.author = user.firstname;
